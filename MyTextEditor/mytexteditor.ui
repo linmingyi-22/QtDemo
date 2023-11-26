@@ -86,7 +86,20 @@
     </property>
     <addaction name="action_About"/>
    </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文本</string>
+    </property>
+    <addaction name="action_TextType"/>
+    <addaction name="action_TextBold"/>
+    <addaction name="action_TextItalic"/>
+    <addaction name="action_TextStrike"/>
+    <addaction name="action_TextUnder"/>
+    <addaction name="action_color"/>
+    <addaction name="action_bgColor"/>
+   </widget>
    <addaction name="menu_file"/>
+   <addaction name="menu"/>
    <addaction name="menu_edit"/>
    <addaction name="menu_help"/>
   </widget>
@@ -94,6 +107,12 @@
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
     <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -109,12 +128,20 @@
    <addaction name="action_Cut"/>
    <addaction name="action_Copy"/>
    <addaction name="action_Paste"/>
+   <addaction name="action_Find"/>
    <addaction name="separator"/>
    <addaction name="action_Undo"/>
    <addaction name="separator"/>
-   <addaction name="action_Find"/>
+   <addaction name="action_TextType"/>
+   <addaction name="action_color"/>
+   <addaction name="action_bgColor"/>
+   <addaction name="action_TextBold"/>
+   <addaction name="action_TextItalic"/>
+   <addaction name="action_TextStrike"/>
+   <addaction name="action_TextUnder"/>
    <addaction name="separator"/>
    <addaction name="action_About"/>
+   <addaction name="separator"/>
   </widget>
   <action name="action_New">
    <property name="icon">
@@ -277,6 +304,105 @@
    </property>
    <property name="text">
     <string>关于软件</string>
+   </property>
+  </action>
+  <action name="action_TextBold">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_bold.png</normaloff>:/Icon/text_bold.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体加粗</string>
+   </property>
+   <property name="toolTip">
+    <string>字体加粗</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_TextItalic">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_italic.png</normaloff>:/Icon/text_italic.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体倾斜</string>
+   </property>
+   <property name="toolTip">
+    <string>字体倾斜</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_TextStrike">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_strike.png</normaloff>:/Icon/text_strike.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除线</string>
+   </property>
+   <property name="toolTip">
+    <string>删除线</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_TextUnder">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_under.png</normaloff>:/Icon/text_under.png</iconset>
+   </property>
+   <property name="text">
+    <string>下划线</string>
+   </property>
+   <property name="toolTip">
+    <string>下划线</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_TextType">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_type.png</normaloff>:/Icon/text_type.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_color">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_color.png</normaloff>:/Icon/text_color.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体颜色</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_bgColor">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_bgColor.png</normaloff>:/Icon/text_bgColor.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体背景</string>
+   </property>
+   <property name="toolTip">
+    <string>字体背景</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
    </property>
   </action>
  </widget>
