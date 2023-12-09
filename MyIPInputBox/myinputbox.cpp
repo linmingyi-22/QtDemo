@@ -31,7 +31,7 @@ MyInputBox::MyInputBox(QWidget *parent)
         QRegularExpressionValidator *validator = new QRegularExpressionValidator(regExp, this);
     #else
         QRegExp regExp(pattern);
-        QRegExpValidator *validator = new QRegExpValidator(regExp, this);
+        QRegExpValidator *validator = new QRegExpValidator(regExp, lblIP);
     #endif
         lblIP->setValidator(validator);
 

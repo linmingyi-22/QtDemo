@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CMyTextEditor</class>
+ <widget class="QMainWindow" name="CMyTextEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CMyTextEditor</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="tab_1">
+       <attribute name="title">
+        <string>new 1</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTextEdit" name="textEdit_1"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_file">
+    <property name="title">
+     <string>文件(F)</string>
+    </property>
+    <addaction name="action_New"/>
+    <addaction name="action_Open"/>
+    <addaction name="action_Close"/>
+    <addaction name="separator"/>
+    <addaction name="action_Save"/>
+    <addaction name="actionl_SaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="action_Exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_edit">
+    <property name="title">
+     <string>编辑(E)</string>
+    </property>
+    <addaction name="action_Undo"/>
+    <addaction name="separator"/>
+    <addaction name="action_Cut"/>
+    <addaction name="action_Copy"/>
+    <addaction name="action_Paste"/>
+    <addaction name="separator"/>
+    <addaction name="action_Find"/>
+   </widget>
+   <widget class="QMenu" name="menu_help">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_About"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文本</string>
+    </property>
+    <addaction name="action_TextType"/>
+    <addaction name="action_TextBold"/>
+    <addaction name="action_TextItalic"/>
+    <addaction name="action_TextStrike"/>
+    <addaction name="action_TextUnder"/>
+    <addaction name="action_color"/>
+    <addaction name="action_bgColor"/>
+   </widget>
+   <addaction name="menu_file"/>
+   <addaction name="menu"/>
+   <addaction name="menu_edit"/>
+   <addaction name="menu_help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_New"/>
+   <addaction name="action_Open"/>
+   <addaction name="action_Save"/>
+   <addaction name="actionl_SaveAs"/>
+   <addaction name="separator"/>
+   <addaction name="action_Cut"/>
+   <addaction name="action_Copy"/>
+   <addaction name="action_Paste"/>
+   <addaction name="action_Find"/>
+   <addaction name="separator"/>
+   <addaction name="action_Undo"/>
+   <addaction name="separator"/>
+   <addaction name="action_TextType"/>
+   <addaction name="action_color"/>
+   <addaction name="action_bgColor"/>
+   <addaction name="action_TextBold"/>
+   <addaction name="action_TextItalic"/>
+   <addaction name="action_TextStrike"/>
+   <addaction name="action_TextUnder"/>
+   <addaction name="separator"/>
+   <addaction name="action_About"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="action_New">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/filenew.png</normaloff>:/Icon/filenew.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建(N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_Open">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/fileopen.png</normaloff>:/Icon/fileopen.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开(O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_Close">
+   <property name="text">
+    <string>关闭(W)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/filesave.png</normaloff>:/Icon/filesave.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存(S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionl_SaveAs">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/filesaveas.png</normaloff>:/Icon/filesaveas.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存为(A)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+S</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_Exit">
+   <property name="text">
+    <string>退出(X)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_Undo">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/editundo.png</normaloff>:/Icon/editundo.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤销(U)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_Cut">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/editcut.png</normaloff>:/Icon/editcut.png</iconset>
+   </property>
+   <property name="text">
+    <string>剪切(T)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_Copy">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/editcopy.png</normaloff>:/Icon/editcopy.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制(C)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_Paste">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/editpaste.png</normaloff>:/Icon/editpaste.png</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴(P)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_Find">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/find.png</normaloff>:/Icon/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>查找(F)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/about.png</normaloff>:/Icon/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于软件</string>
+   </property>
+  </action>
+  <action name="action_TextBold">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_bold.png</normaloff>:/Icon/text_bold.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体加粗</string>
+   </property>
+   <property name="toolTip">
+    <string>字体加粗</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_TextItalic">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_italic.png</normaloff>:/Icon/text_italic.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体倾斜</string>
+   </property>
+   <property name="toolTip">
+    <string>字体倾斜</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_TextStrike">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_strike.png</normaloff>:/Icon/text_strike.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除线</string>
+   </property>
+   <property name="toolTip">
+    <string>删除线</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_TextUnder">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_under.png</normaloff>:/Icon/text_under.png</iconset>
+   </property>
+   <property name="text">
+    <string>下划线</string>
+   </property>
+   <property name="toolTip">
+    <string>下划线</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_TextType">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_type.png</normaloff>:/Icon/text_type.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_color">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_color.png</normaloff>:/Icon/text_color.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体颜色</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_bgColor">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/Icon/text_bgColor.png</normaloff>:/Icon/text_bgColor.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体背景</string>
+   </property>
+   <property name="toolTip">
+    <string>字体背景</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="Image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

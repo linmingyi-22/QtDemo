@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icon/filenew.png</file>
+        <file>Icon/fileopen.png</file>
+        <file>Icon/filesave.png</file>
+        <file>Icon/filesaveas.png</file>
+        <file>Icon/find.png</file>
+        <file>Icon/editcopy.png</file>
+        <file>Icon/editcut.png</file>
+        <file>Icon/editpaste.png</file>
+        <file>Icon/editundo.png</file>
+        <file>Icon/about.png</file>
+        <file>Icon/text_bold.png</file>
+        <file>Icon/text_italic.png</file>
+        <file>Icon/text_strike.png</file>
+        <file>Icon/text_under.png</file>
+        <file>Icon/tools-check-spelling.png</file>
+        <file>Icon/text_type.png</file>
+        <file>Icon/text_bgColor.png</file>
+        <file>Icon/text_color.png</file>
+    </qresource>
+</RCC>
