@@ -51,7 +51,6 @@ void CMyNavButton::leaveEvent(QEvent *)
 
 void CMyNavButton::paintEvent(QPaintEvent *)
 {
-    qDebug()<<1;
     QPainter painter(this);
     painter.setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing);
 

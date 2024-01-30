@@ -15,6 +15,9 @@ IconHelper::IconHelper(const QString &fontFile, const QString &fontName, QObject
     {
         int fontId=fontDB.addApplicationFont(fontFile);//将指定的字体文件（fontFile）添加到应用程序的字体库中，并返回一个字体标识符（fontId）
         QStringList listName=fontDB.applicationFontFamilies(fontId);
+        qDebug()<<"11"<<listName<<Qt::endl;
+        QStringList fontFamilies = fontDB.families();
+        qDebug()<<"22"<<fontFamilies<<Qt::endl;
         if(listName.count()==0)
         {
             qDebug()<< QString("load %1 error").arg(fontName);
@@ -227,7 +230,6 @@ QPixmap IconHelper::getPixmap1(const QColor &color, int icon, quint32 size,quint
     m_fontIcon.setPixelSize(size);
     painter.setFont(m_fontIcon);
     painter.drawText(pix.rect(), flags, (QChar)icon);//icon表示的是图标（箭头....）
-    qDebug()<<pix.rect();
     //painter.drawText(pix.rect(), flags, "11");
     painter.end();
     return pix;
